@@ -7,38 +7,36 @@
 @prefix tt:				<https://fillan.github.io/tt.ttl#> .
 
 tt:
-    a owl:Ontology;
-    owl:versionInfo "0.3";
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable";
-    rdfs:label "Dependent Type Theory Syntax Vocabulary based on MiniTT"@en;
-    dcterms:description "A vocabulary that allows dependent type theory to be published in RDF."@en;
-    dcterms:created "2020-05-19"^^xsd:date;
-    dcterms:title "Dependent Type Theory Syntax Vocabulary based on MiniTT"@en;
+    a owl:Ontology ;
+    owl:versionInfo "0.3" ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" ;
+    rdfs:label "Dependent Type Theory Syntax Vocabulary based on MiniTT"@en ;
+    dcterms:description "A vocabulary that allows dependent type theory to be published in RDF."@en ;
+    dcterms:created "2020-05-19"^^xsd:date ;
+    dcterms:title "Dependent Type Theory Syntax Vocabulary based on MiniTT"@en ;
     dcterms:license <http://creativecommons.org/licenses/by/1.0/> ;
-    dcterms:creator "Aik Beng NG", "Zhangsheng LAI", "Shaowei LIN";
-    vann:preferredNamespacePrefix "tt";
-    vann:preferredNamespaceUri "https://fillan.github.io/tt.ttl#";
-	rdfs:seeAlso <http://www.cse.chalmers.se/~bengt/papers/GKminiTT.pdf>;
-    .
+    dcterms:creator "Aik Beng NG", "Zhangsheng LAI", "Shaowei LIN" ;
+    vann:preferredNamespacePrefix "tt" ;
+    vann:preferredNamespaceUri "https://fillan.github.io/tt.ttl#" ;
+	rdfs:seeAlso <http://www.cse.chalmers.se/~bengt/papers/GKminiTT.pdf> .
 
 # -- MiniTT --
 
-tt:MiniTT a rdfs:Class;
-    rdfs:label "MiniTT"@en;
-    rdfs:comment "A small language with dependent types, its syntax, operational semantics and type system."@en;
-    rdfs:isDefinedBy tt:;
-    . 
+tt:MiniTT a rdfs:Class ;
+    rdfs:label "MiniTT"@en ;
+    rdfs:comment "A small language with dependent types, its syntax, operational semantics and type system."@en ;
+    rdfs:isDefinedBy tt: .
 
 # -- Expressions --
 
-tt:Expressions a rdfs:Class;
-	rdfs:label "Expressions"@en;
-	rdfs:comment "A collection of type theoretic expressions associated to each type forming operation such as unit type, dependent product, labelled sum and universe."@en;
-	rdfs:subClassOf tt:MiniTT;
-	rdfs:isDefinedBy tt:;
+tt:Expressions a rdfs:Class ;
+	rdfs:label "Expressions"@en ;
+	rdfs:comment "A collection of type theoretic expressions associated to each type forming operation such as unit type, dependent product, labelled sum and universe."@en ;
+	rdfs:subClassOf tt:MiniTT ;
+	rdfs:isDefinedBy tt: .
 
-tt:EFst a rdfs:Class;
-	rdfs:label "Projection of 1st term"@en;
-	rdfs:comment "Projection of 1st term from a pair M,N."@en;
-	rdfs:subClassOf tt:Expressions;
-	rdfs:isDefinedBy tt:;
+tt:EFst a rdfs:Class ;
+	rdfs:label "Projection of 1st term"@en ;
+	rdfs:comment "Projection of 1st term from a pair M,N."@en ;
+	rdfs:subClassOf tt:Expressions ;
+	rdfs:isDefinedBy tt: .
