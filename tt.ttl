@@ -41,6 +41,12 @@ tt:EFst a rdfs:Class ;
     rdfs:subClassOf tt:Expressions ;
     rdfs:isDefinedBy tt: .
 
+tt:EPair a rdfs:Class ;
+    rdfs:label "Pair of terms"@en ;
+    rdfs:comment "Pair of terms such as M,N."@en ;
+    rdfs:subClassOf tt:Expressions ;
+    rdfs:isDefinedBy tt: .
+
 tt:U a rdfs:Class;
     rdfs:label "Universe"@en;
     rdfs:comment "Type of small types. Objects in this are types not built up using U."@en;
@@ -53,4 +59,4 @@ tt:args a rdf:Property;
     rdfs:label "Type Theoretic Arguments"@en;
     rdfs:comment "Generic predicate to attach arguments to a type theoretic expression."@en;
     rdfs:domain tt:Expressions;
-    rdfs:range tt:U .
+    rdfs:range rdf:List .
