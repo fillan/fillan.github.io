@@ -47,10 +47,24 @@ tt:EPair a rdfs:Class ;
     rdfs:subClassOf tt:Expressions ;
     rdfs:isDefinedBy tt: .
 
+tt:EPi a rdfs:Class ;
+    rdfs:label "Dependent product type"@en ;
+    rdfs:comment "The dependent product type is the type of functions taking an object M in the type A to an object in the type B (where B may depend on M)."@en ;
+    rdfs:subClassOf tt:Expressions ;
+    rdfs:isDefinedBy tt: .
+
 tt:U a rdfs:Class;
     rdfs:label "Universe"@en;
     rdfs:comment "Type of small types. Objects in this are types not built up using U."@en;
     rdfs:subClassOf tt:Expressions ;
+    rdfs:isDefinedBy tt: .
+
+# -- Patterns -- 
+
+tt:Patterns a rdfs:Class ;
+    rdfs:label "Patterns"@en ;
+    rdfs:comment "Patterns are used to introduce variables such as x | p,p | _ ."@en ;
+    rdfs:subClassOf tt:MiniTT ;
     rdfs:isDefinedBy tt: .
 
 # -- Structure -- 
